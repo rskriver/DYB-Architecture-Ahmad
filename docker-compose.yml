@@ -26,6 +26,6 @@ services:
     ports:
       - 8070:8080
     volumes:
-      - jenkins-home:/var/tst/jenkins_home
+      - tst-jenkins-home:/var/tst/jenkins_home
 volumes:
   tst-jenkins-home:
