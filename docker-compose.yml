@@ -18,7 +18,7 @@ services:
     volumes:
       - ./db:/docker-entrypoint-initdb.d/
     ports:
-      - 5432:5432
+      - 5422:5432
   jenkins:
     container_name: tst-jenkins
     restart: always
