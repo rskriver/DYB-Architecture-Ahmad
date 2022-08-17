@@ -1,6 +1,7 @@
 version: '3.3'
 services:
   postgres:
+    container_name: tst-postgres
     image: postgres:13.1
     healthcheck:
       test: [ "CMD", "pg_isready", "-q", "-d", "postgres", "-U", "root" ]
@@ -19,12 +20,12 @@ services:
     ports:
       - 5432:5432
   jenkins:
-    container_name: jenkins
+    container_name: tst-jenkins
     restart: always
     image: jenkins/jenkins:lts
     ports:
-      - 8080:8080
+      - 8070:8080
     volumes:
-      - jenkins-home:/var/jenkins_home
+      - jenkins-home:/var/tst/jenkins_home
 volumes:
-  jenkins-home:
+  tst-jenkins-home:
