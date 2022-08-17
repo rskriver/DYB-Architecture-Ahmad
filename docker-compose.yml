@@ -25,6 +25,7 @@ services:
     image: jenkins/jenkins:lts
     ports:
       - 8070:8080
+      - 50000:50000
     volumes:
       - tst-jenkins-home:/var/tst/jenkins_home
 volumes:
